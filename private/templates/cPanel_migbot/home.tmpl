@@ -1,0 +1,113 @@
+<TMPL_INCLUDE NAME="header.tmpl">
+
+<h3>Failed Transfers</h3>
+<table class="comp_xfer">
+	<tr>
+		<th>Ticket</th>
+		<th>Subject</th>
+		<th>Duration</th>
+		<th>No.Acccts</th>
+		<th>ETA</th>
+		<th>Status</th>
+		<th>Actions</th>
+	</tr>
+	<!-- TMPL_LOOP NAME=FAILED_XFER -->
+	<tr>
+		<td><a href="https://staff.cpanel.net/staff/msg.new.cgi?<!-- TMPL_VAR NAME=TICKET_NUM -->"><!-- TMPL_VAR NAME=TICKET_NUM --></a></td>
+		<td class="ticket_subject"><a href="https://staff.cpanel.net/staff/msg.new.cgi?<!-- TMPL_VAR NAME=TICKET_NUM -->"><!-- TMPL_VAR NAME=TICKET_SUBJECT --></a></td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<!-- /TMPL_LOOP -->
+</table>
+
+
+<h3>Completed Transfers</h3>
+<table class="comp_xfer">
+	<tr>
+		<th>Ticket</th>
+		<th>Subject</th>
+		<th>Duration</th>
+		<th>No.Acccts</th>
+		<th>ETA</th>
+		<th>Status</th>
+		<th>Actions</th>
+	</tr>
+	<!-- TMPL_LOOP NAME=comp_xfer -->
+	<tr>
+		<td><a href="https://staff.cpanel.net/staff/msg.new.cgi?<!-- TMPL_VAR NAME=TICKET_NUM -->"><!-- TMPL_VAR NAME=TICKET_NUM --></a></td>
+		<td class="ticket_subject"><a href="https://staff.cpanel.net/staff/msg.new.cgi?<!-- TMPL_VAR NAME=TICKET_NUM -->"><!-- TMPL_VAR NAME=TICKET_SUBJECT --></a></td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<!-- /TMPL_LOOP -->
+</table>
+
+
+<h3>Pending Transfers</h3>
+<table class="footable">
+	<thead>
+		<tr>
+			<th data-toggle="true">Ticket</th>
+			<th>Subject</th>
+			<th data-hide="phone">Duration</th>
+			<th data-hide="phone">No. Acccts</th>
+			<th data-hide="phone">ETA</th>
+			<th data-hide="phone,tablet">Status</th>
+			<th data-hide="phone">Actions</th>
+		</tr>
+	</thead>
+	<tbody>
+	<!-- TMPL_LOOP NAME=PENDING -->
+		<tr>
+			<td><a href="https://staff.cpanel.net/staff/msg.new.cgi?<!-- TMPL_VAR NAME=TICKET_ID -->"><!-- TMPL_VAR NAME=TICKET_ID --></a></td>
+			<td><a href="https://staff.cpanel.net/staff/msg.new.cgi?<!-- TMPL_VAR NAME=TICKET_ID -->"><!-- TMPL_VAR NAME=TICKET_SUBJECT --></a></td>
+			<td>LONG LONG LONG LONG LONG </td>
+			<td>LONG LONG LONG LONG LONG LONG </td>
+			<td>LONG LONG LONG LONG LONG </td>
+			<td>LONG LONG LONG LONG LONG LONG </td>
+			<td>LONG LONG LONG LONG LONG LONG </td>
+		</tr>
+	<!-- /TMPL_LOOP -->
+	</tbody>
+</table>
+
+
+<h3>Current Transfers</h3>
+<table class="comp_xfer">
+	<tr>
+		<th>Ticket</th>
+		<th>Subject</th>
+		<th>Duration</th>
+		<th>No.Acccts</th>
+		<th>ETA</th>
+		<th>Status</th>
+		<th>Actions</th>
+	</tr>
+	<!-- TMPL_LOOP NAME=current_xfer -->
+	<tr>
+		<td><a href="https://staff.cpanel.net/staff/msg.new.cgi?<!-- TMPL_VAR NAME=TICKET_NUM -->"><!-- TMPL_VAR NAME=TICKET_NUM --></a></td>
+		<td class="ticket_subject"><a href="https://staff.cpanel.net/staff/msg.new.cgi?<!-- TMPL_VAR NAME=TICKET_NUM -->"><!-- TMPL_VAR NAME=TICKET_SUBJECT --></a></td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+<!-- /TMPL_LOOP -->
+</table>
+
+<script type="text/javascript">
+	$(function () {
+		$('.footable').footable();
+	});
+</script>
+
+
+<TMPL_INCLUDE NAME="footer.tmpl">

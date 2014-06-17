@@ -1,0 +1,54 @@
+<TMPL_INCLUDE NAME="header.tmpl">
+<TMPL_IF NAME="closed">
+	<div class="warning">
+		<p class="warning">The ticket you are adding has been closed. Do you really want to add this ticket?</p>
+	</div>
+</TMPL_IF>
+
+
+
+  <p>Information for <a href="https://staff.cpanel.net/staff/msg.new.cgi?<!-- TMPL_VAR NAME=TICKET_ID -->" target="_Blank">[<!-- TMPL_VAR NAME=TICKET_ID -->] <!-- TMPL_VAR NAME=TICKET_SUBJECT --></a></p>
+
+
+
+
+<form action="/new.cgi">
+<input type="hidden" name="do" value="create" \>
+<input type="hidden" name="ticketid" value="<!-- TMPL_VAR NAME=TICKET_ID -->" \>
+<br \>
+<label for="subject">Subject</label>
+<input type="text" name="subject" value="<!-- TMPL_VAR NAME=TICKET_SUBJECT -->" disabled \>
+<br \>
+<label for="xfer_id">Transfer ID</label>
+<input type="text" name="xfer_id" value="<!-- TMPL_VAR NAME=XFER_ID -->" \>
+<br \>
+
+<table>
+	<tr>
+		<th>Server #</th>
+		<th>Server IP</th>
+		<th>Source</th>
+		<th>Destination</td>
+	</tr>
+<TMPL_LOOP NAME="SERVERS">
+	<tr>
+		<td class="select_server_number"><TMPL_VAR NAME="NUMBER"></td>
+		<td class="select_server_ip"><TMPL_VAR NAME="IP"></td>
+		<td class="server_select_radio"><input type="radio" name="src_server" value="<TMPL_VAR NAME=NUMBER>"></td>
+		<td class="server_select_radio"><input type="radio" name="dest_server" value="<TMPL_VAR NAME=NUMBER>"></td>
+	</tr>
+</TMPL_LOOP>
+</table>
+<input type="submit" value="Create" onclick="this.disabled=true;
+this.value='Processing...';
+this.form.submit();">
+</form>
+    <p><!-- TMPL_VAR NAME=TICKET_SERVER --> was kind enough to provide this information.</p>
+    
+
+<hr>
+<pre>
+<!-- TMPL_VAR NAME=AUTH -->
+</pre>
+
+<TMPL_INCLUDE NAME="footer.tmpl">

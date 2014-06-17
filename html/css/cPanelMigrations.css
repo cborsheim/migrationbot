@@ -1,0 +1,37 @@
+div.warning {
+	display: block;
+	padding 10px 10px 10px 10px;
+	text-align: center;
+	font-weight: bold;
+	font-size: 18px;
+	background-color: #f16529;
+	color: #FFF;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+}
+
+
+h1 {
+  font-weight: normal;
+  letter-spacing: -1px;
+  color: #34495E;
+}
+
+.rwd-table {
+  background: #34495E;
+  color: #fff;
+  border-radius: .4em;
+  overflow: hidden;
+  tr {
+    border-color: lighten(#34495E, 10%);
+  }
+  th, td {
+    margin: .5em 1em;
+    @media (min-width: $breakpoint-alpha) { 
+      padding: 1em !important; 
+    }
+  }
+  th, td:before {
+    color: #dd5;
+  }
+}

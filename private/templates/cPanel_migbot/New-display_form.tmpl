@@ -1,0 +1,22 @@
+<TMPL_INCLUDE NAME="header.tmpl">
+
+
+<form action="/new.cgi">
+<INPUT type="hidden" name="do" value="confirm"  \>
+
+
+<label for"ticketid">Ticket#</label>
+<INPUT type="text" name="ticketid" \>
+
+
+<br \>
+<label for="trans_id">Transfer ID</label>
+<input type="text" name="xfer_id" \>
+<br \>
+<INPUT type="submit" value="Fetch Server Info" onclick="this.disabled=true;
+this.value='Processing and fetching infomation...';
+this.form.submit();">
+
+</form>
+
+<TMPL_INCLUDE NAME="footer.tmpl">
