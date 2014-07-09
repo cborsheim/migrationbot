@@ -4,7 +4,6 @@ use base qw(cPmigbot_Super Common cPMech);
 use strict;
 use warnings;
 use CGI::Application;
-use Switch;
 use Data::Dumper;
 
 
